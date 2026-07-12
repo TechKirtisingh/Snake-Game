@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Almendra+SC&family=IM+Fell+DW+Pica:ital@0;1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* vh viewport height mtlb 100% height of the screen */
+/* vw: viewport width mtlb 100% width of the screen 
+flex: taki koi bhi element ko center mein laane ke liye */
+
+.body {
+  background: url("../bg.jpg");
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#board {
+  background: linear-gradient(rgb(164, 226, 164), rgb(165, 165, 111));
+  width: 90vmin;
+  height: 92vmin;
+  border: 2px solid black;
+  display: grid;
+  /* 1fr: 1 fraction of the available space 
+  use to create grid by 18,1fr*/
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+}
+
+.head
+{
+    background: linear-gradient(rgb(110,21,28), rgb(23,23,131));
+    border: .25vmin solid black;
+    border-radius: 12px;
+    transform: scale(1.05);
+}
+
+#score {
+  position: absolute;
+  top: 9px;
+  right: 200px;
+  font-size: 3.5vmin;
+  color: black;
+  font-weight: bold;
+  font-family: "Almendra SC", serif;
+}
+
+#highScore {
+  position: absolute;
+  top: 59px;
+  right: 140px;
+  font-size: 3.5vmin;
+  color: black;
+  font-weight: bold;
+  font-family: "Almendra SC", serif;
+}
+
+.snake {
+  background-color: rgb(170, 51, 170);
+  border: 0.25vmin solid rgb(37, 6, 27);
+  border-radius: 12px;
+}
+
+.food {
+  background: linear-gradient(rgb(3, 68, 3), yellow);
+  border: 0.25vmin solid rgb(1, 32, 6);
+  border-radius: 8px;
+}
